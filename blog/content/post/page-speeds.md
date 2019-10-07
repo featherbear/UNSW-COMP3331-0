@@ -1,5 +1,5 @@
 ---
-title: "Lecture Four"
+title: "Page Speeds"
 date: 2019-09-26T14:13:56+10:00
 
 hiddenFromHomePage: false
@@ -13,44 +13,6 @@ sequenceDiagrams:
   enable: false
   options: ""
 ---
-
-# Stateful and Stateless !?!?!?!
-
-- TCP is _stateful_, meaning that each request has some sort of knowledge of prior interaction
-- HTTP is _stateless_, meaning that each request is independent of each other
-
-<!--
-## HTTP Request Message
-
-- Request
-- Response
-
-Request: METHOD PATH PROTOCOL\r\n
-
-We supply the Host header, as "Virtual Hosts" can be set up -->
-
-- HTTP is all plain-text
-
-# Session State
-
-As HTTP(s) requests are stateless, they cannot inherently pass data between different requests. To solve this problem, we can use **cookies**.
-
-Browser cookies are locally stored pieces of data that are appended on to every request made to the server.
-
-This allows us to maintain a form of persistence.
-
-We might use cookies to identify ourselves to the server (ie a user)
-
-## Set-Cookie header
-
-- Domain - The sites that the cookie applies to
-- Name - The key (name) of the cookie
-- Value - The value of the cookie
-- Expires - The time that the cookie will be valid for
-
-## Issues with Cookies
-
-- Privacy concerns - tracking
 
 # Page Speeds
 
@@ -101,29 +63,3 @@ Some factors include:
   - Browsers can perform a Conditional GET request, with the `If-Modified-Since` header
     - HTTP `304` Not Modified returned if not changed
   - There is also an `ETag` header
-
-# HTTPS
-
-- HTTP over TLS
-- Provides authentication and bidirectional encryption
-
-# Email
-
-- User Agent
-- Mail Server
-- SMTP Protocol
-
-## User Agent
-
-- The mail client
-
-## Mail Server
-
-- Mailbox
-- Message queue
-
-## Simple Mail Transfer Protocol
-
-The protocol to send emails (**NOT RECEIVE**)
-
-Receiving is done via either IMAP or POP
